@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .contain
+        {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(125, 97, 252);
+            border: 5px solid rgb(159, 80, 159);
+        }
+        .box1
+        {
+            height: 30px;
+            width: 200px;
+            border: 2px solid rgb(246, 8, 20);
+            margin: 15px;
+            background-color: antiquewhite;
+            box-shadow: 2px 2px 10px ;
+
+            /*  main */
+            position: relative;   /*IMP*/
+           animation-name: rightmovement ;
+
+           animation: 4s linear 1s infinite alternate both running rightmovement ;
+
+
+        }
+        @keyframes rightmovement
+        {
+            from
+            {
+                /* initial state */
+                top: 0%;
+                left: 0%;
+            }
+            to
+            {
+                /* destination state */
+              top: 0%;
+              left: 400px;
+             
+            }
+        }
+        .box2
+        {
+            height: 30px;
+            width: 200px;
+            border: 2px solid rgb(27, 6, 255);
+            margin: 15px;
+            box-shadow: 2px 2px 10px ;
+            background-color: rgb(48, 240, 14);
+
+            /*  main */
+            position: relative;   /* IMP */
+            
+           animation: 4s linear 1s infinite alternate both 
+           running nextbox ;
+           
+        }
+        @keyframes nextbox
+         {
+            
+           from
+           {
+            top: 580px ;
+            left: 400px;
+           }
+         to 
+         {
+            top:600px;
+            left:0px;
+         }
+        }
+
+        #circle
+        {
+            height: 50px;
+            width: 50px;
+            box-shadow: 2px 2px 5px rgb(18, 18, 18);
+            border-radius: 100px;
+            background-color: rgb(240, 14, 33);
+
+            /*  main */
+            position: relative;   /* IMP */
+            
+           animation-name: circle ;
+           animation: 8s ease-in-out infinite none alternate  
+         circle ;
+
+        }
+
+        @keyframes circle
+        {
+            /* Upper */
+            0%
+            {
+                top: 0%;
+                left: 2%;
+            }
+            30%
+            {
+                top: 0%;
+                left: 90%;
+            }
+
+            /* Lower */
+            70%
+            {
+                top: 72%;
+                left: 2%;
+            }
+            100%
+            {
+                top: 71%;
+                left: 90%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+
+        <div class="contain">
+
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div id="circle"></div>
+
+        </div>
+    
+    </main>
+</body>
+</html>
