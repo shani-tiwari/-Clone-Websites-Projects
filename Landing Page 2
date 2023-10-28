@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            background-color: transparent;
+
+        }
+        body::before{
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            position: absolute;
+            background-image: linear-gradient(160deg,  #14efb5 20%, #eb0be4 80%  );
+            background-size: 10% 100%;
+            
+        }
+         body span{
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+        body:hover::before{
+            animation: ani_border 11s ease-in-out infinite;
+        }
+        span{
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes ani_border {
+                to{
+                    transform: translateX(-30%);
+                }
+            }
+        .card{
+            height: 55%;
+            width: 19%;
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 5px 5px 20px rgb(60, 60, 60), -6px -6px 3px rgb(252, 253, 252);
+            background-color: rgb(187, 181, 181);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 11px;
+            position: relative; /* spin boxes ko andar rakhne ke lie */
+            transition: 4s linear;
+        }
+        .card:hover{
+            background-color: rgba(7, 7, 7, 0.3);
+        }
+        .image{
+            height: 27%;
+            width: 37%;
+            border-radius: 50%;
+            background-size: contain;
+            margin-top: 30px;
+        }
+        img{
+            height: 80%;
+            width: 80%;
+            margin-top: 1px;
+            border-radius: 50px;
+            border: 4px solid white;
+            box-shadow: 3px 3px 10px black, inset 6px 6px 10px white ;
+        }
+        .inputbox{
+            display: flex;
+            flex-direction: column;
+        }
+        h4{
+            margin-top: -15px;
+            font-size:larger;
+        }
+        h6{
+            text-align: center;
+            font-size: small;
+        }
+        button{
+            height: 35px;
+            width: 230px;
+            border-radius: 15px;
+            text-decoration: none;
+            border: none;
+            margin-top: 20px;
+            box-shadow: inset 2px 3px 7px rgb(9, 9, 9), inset -5px -5px 12px rgb(253, 253, 253);
+            background-color: rgb(197, 197, 222);
+            
+        }
+        .login{
+            height: 35px;
+            width: 200px;
+            color: white;
+            font-size: large;
+            font-display: inherit;
+            margin-top: 5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 3px 3px 11px rgb(72, 70, 70), inset -3px -3px 11px rgb(255, 255, 255);
+
+        }
+        .text2{
+            font-size: 13px;
+            color: gray;
+        }
+        .bg{
+            position: absolute; 
+            background-color: transparent;
+            height: 100%;
+            width: 100%;
+        }
+        .bg div{
+            height: 25px;
+            width: 25px;
+            border: 4px solid rgb(252, 120, 4);
+            position: absolute;
+        }
+        .bg div:nth-child(1){
+            top: 70%;
+            left: 10%;
+            animation: spin 3.1s linear infinite;
+        }
+        .bg div:nth-child(2){
+            top: 25%;
+            left: 35%;
+            animation: spin 5s linear infinite;
+        }
+        .bg div:nth-child(3){
+            top: 80%;
+            left: 50%;
+            animation: spin 7.3s linear infinite;
+        }
+        .bg div:nth-child(4){
+            top: 21%;
+            left: 80%;
+            animation: spin 5.5s linear infinite;
+        }
+        .bg div:nth-child(5){
+            top: 2%;
+            left: 21%;
+            animation: spin 4.3s linear infinite;
+        }
+        .bg div:nth-child(6){
+            top: 60%;
+            left: 85%;
+            animation: spin 7s linear infinite;
+        }
+        .bg div:nth-child(7){
+            top: 40%;
+            left: 90%;
+            animation: spin 4s linear infinite;
+        }
+        .bg div:nth-child(8){
+            top: 50%;
+            left: 2%;
+            animation: spin 5s linear infinite;
+        }
+        .bg div:nth-child(9){
+            top: 55%;
+            left: 45%;
+            animation: spin 3.6s linear infinite;
+        }
+        .bg div:nth-child(10){
+            top: 20%;
+            left: 10%;
+            animation: spin 6s linear infinite;
+        }
+        @keyframes spin {
+            0%{
+                transform: scale(0) translateY(0) rotate(0);
+                opacity: 0;
+            }
+            50%{
+                transform: scale(1) translateY(55px) rotate(360deg);
+                opacity: 0.5;
+            }
+            100%{
+                    opacity: 0;
+            }
+        }
+        </style>
+</head>
+<body>
+    <span></span>
+        <div class="card">
+                    <div class="bg">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="image">
+                        <img  src="de.webp" alt="">
+                    </div>
+
+                    <div class="text">
+                        <h4>Web Development</h4>
+                        <h6>Made easy!</h6>
+                    </div>
+
+                    <div class="inputbox">
+                            <button type="text" placeholder="username"><p>username</p>
+                            <button type="text" placeholder="password"><p>password</p>
+                    </div>
+
+                    <div class="login">
+                        <p>Login</p>
+                    </div>
+
+                    <div class="text2">
+                        <p>Forgot Password ? <b>or</b> Sign Up</p>
+                    </div>
+
+        </div>
+</body>
+</html>
