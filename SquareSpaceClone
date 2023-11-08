@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquareSpace</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: white;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        .page{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+        }
+        .page2{
+            background-color: rgb(45, 38, 38);
+        }
+        .nav{
+            height: 60px;
+            width: 100%;
+            padding: 0px 35px;
+            text-transform: uppercase;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            /* border-bottom: 4px solid gray; */
+            box-shadow: 2px 0px 50px gray;
+        }
+        .part1 h2{
+            font-size: 29px;
+        }
+        .part2{
+            display: flex;
+            gap: 50px;
+            /* justify-content: center;
+            align-items: center; */
+        }
+        .part3{
+             display: flex;
+             gap: 40px;
+            /*justify-content: center;  */
+            align-items: center; 
+        }
+        .nav button{
+            background-color: white;
+            color: black;
+            padding: 8px 15px;
+            border: none;
+            font-size: 18px;
+            font-weight: 800;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        /*  nav ends */
+
+        .main h1{
+            font-size: 90px;
+            text-transform: uppercase;
+            gap: 10px;
+            /* to make span in center */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* line-height: 100px; */
+        }
+        .main h1 span{
+                background-color: brown;
+                color: rgb(248, 246, 246);
+                /* gap: 5px; */
+                font-size: large;
+                padding: 17px 37px;
+                border-radius: 50px;
+        }
+        .main h1:nth-child(2){
+            color: red;
+            margin-top: 150px;
+        }
+        .main .img1{
+            position: absolute;
+            height: 300px;
+            width: 200px;
+            border-radius: 20px;
+            top: 27%;
+            left: 15%;
+            
+        }
+        .main .img2{
+            position: absolute;
+            height: 300px;
+            width: 400px;
+            border-radius: 20px;
+            bottom: 5%;
+            right: 5%;
+            
+        }
+        .main h5{
+            position: absolute;
+            left: 50%;
+            /* top: 80%; */
+            bottom: 15%;
+            font-size: 25px;
+            transform: translate(-50%, 50%);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+            <div class="page1 page">
+                    <div class="nav">
+
+                            <div class="part1">
+                                <h2>squarespace</h2>
+                            </div>
+
+                            <div class="part2">
+                                <h3>products</h3>
+                                <h3>templates</h3>
+                                <h3>resources</h3>
+                            </div>
+
+                            <div class="part3">
+                                <h3>log in</h3>
+                                <button>get started</button>
+                            </div>
+
+                    </div>
+                    <!-- nav ends -->
+
+                    <!-- seprate h1's coz they are in diff. lines,  -->
+                <h1>Everything</h1>    
+                <h1>to <span>book now </span>sell</h1>
+                <h1>anything</h1>
+                <img class="img1" src="https://th.bing.com/th/id/OIP.ZpjLjuQ0gPu8sXwmIHapPwHaKe?pid=ImgDet&rs=1" alt="not loading">
+                <img class="img2" src="https://wallpapercave.com/wp/wp2100352.jpg" alt="">
+                    <h5> 🔻scroll down 👇</h5>
+
+
+           </div>
+
+    </div>
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" 
+            integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==
+            "crossorigin="anonymous"referrerpolicy="no-referrer"></script>
+        <script>
+                 var tl =  gsap.timeline();  // to rum animation one by one, not at a time  ( in Sync )
+                tl.from(".part1 h2, .nav h3, .nav button", {   // from - final to initial , targeting multiple elements at a time. 
+                    y: -100,
+                    duration: 1,
+                    delay: 0.4,
+                    opacity: 0,
+                    stagger: 0.2
+                })
+                tl.from(".main h1", {
+                    y: 100,
+                    opacity: 0,
+                    stagger: 0.2
+                })
+                tl.from(".main img", {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 2
+
+                })
+                tl.from("h5", {
+                    scale: 0,
+                    opacity: 0,
+                })
+                tl.to("h5", {
+                    y: 30,
+                    repeat: -1,
+                    duration: 0.7,
+                    yoyo: true
+                })
+
+
+
+
+        </script>
+</body>
+</html>
